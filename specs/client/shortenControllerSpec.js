@@ -41,9 +41,13 @@ describe('ShortenController', function () {
   });
 
   it('should be able to create new links with addLink()', function () {
+    //when it post give the reponse 201
     $httpBackend.expectPOST("/api/links").respond(201, '');
+    //add the link
     $scope.addLink();
+    //give me the data (i.e. flush)
     $httpBackend.flush();
+    //loading at thise point should be done so it should equal false; 
     expect($scope.loading).to.be(false);
   });
 });
