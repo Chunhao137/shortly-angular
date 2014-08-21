@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Shortly</title>
+
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
@@ -10,6 +11,7 @@
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
     <div ng-view></div>
+       <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
     <script>
       document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
@@ -22,5 +24,6 @@
     <script src="app/shorten/shorten.js"></script>
     <script src="app/services/services.js"></script>
     <script src="app/app.js"></script>
+  
   </body>
 </html>

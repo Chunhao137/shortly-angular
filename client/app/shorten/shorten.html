@@ -1,6 +1,17 @@
-<div id='container'>
-<!-- Your code here -->
+<a href="#/links">Click here to go to links page.</a><br>
+<button ng-click="signout()">Signout</button>
 
+<div id='container' class="creator" ng-controller="ShortenController">
+  <form name="shortenForm" ng-submit="addLink()" novalidate>
+    Please enter the URL you want to shorten:<br>
+    <input name="url" type="url" ng-model="link.url" placeholder="E.g.: http://google.com" required><br>
+    <button ng-disabled="shortenForm.$invalid">Submit</button><br>
+    <img class='spinner' src='assets/spiffygif_46x46.gif' ng-show="loading"><br>
+    <div class="message" ng-show="shortenForm.url.$invalid">Invalid URL. Please Try again.</div>
+  </form>
 </div>
+
+
+
 
 

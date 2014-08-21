@@ -1,3 +1,14 @@
-<div id='container'>
-  <!-- Your html here -->
+<a href="#/shorten">Click here to go to shorten page.</a><br>
+<button ng-click="signout()">Signout</button>
+
+<div id='container' ng-controller='LinksController'>
+  <input type='text' placeholder='search for a link' ng-model='filter'>
+  <ul>
+    <li class="link" ng-repeat="link in data.links | filter: filter | orderBy:'-visits'"   >
+      <a href="{{link.base_url }}/api/links/{{ link.code}}" target="_blank">
+
+      	{{link.title}}
+      </a>
+    </li>
+  </ul>
 </div>
